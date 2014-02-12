@@ -1,0 +1,15 @@
+<div id="projects">
+	<h1>My projects</h1>
+	<div class="create-container">
+		<button class="btn btn-primary btn-green">Create a new project</button>
+	</div>
+	<ul>
+		<li ng-repeat="project in projects" class="project-container">
+			<h2><a href="/projects/{{ project.id }}">{{ project.name }}</a></h2>
+			<ul>
+				<li tooltip="Members"><span class="glyphicon glyphicon-user"></span> {{ project.stats.numMembers }}</li>
+				<li tooltip="Tasks"><span class="glyphicon glyphicon-check"></span> {{ project.stats.numTasks }}</li>
+			</ul>
+		</li>
+	</ul>
+</div>

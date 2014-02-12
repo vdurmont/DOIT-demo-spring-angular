@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true">
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>utf-8</charset>
+            <Pattern>%date [%level – %file:%method:%line] %message%n</Pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.github.vdurmont.doit" level="${logback.loglevel}"/>
+    <logger name="ch.qos.logback" level="WARN"/>
+    <logger name="org.apache" level="WARN"/>
+    <logger name="org.hibernate" level="WARN"/>
+    <logger name="org.atmosphere" level="WARN"/>
+    <logger name="org.springframework" level="WARN"/>
+    <logger name="java.sql" level="WARN"/>
+    <logger name="org.jboss" level="WARN"/>
+    <logger name="org.eclipse" level="WARN"/>
+
+    <root level="${logback.loglevel}">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>
